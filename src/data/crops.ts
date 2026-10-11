@@ -1,0 +1,246 @@
+export interface Crop {
+  id: string;
+  name: string;
+  hindiName: string;
+  category: 'Cereals' | 'Pulses' | 'Oilseeds' | 'Vegetables' | 'Fruits' | 'Commercial' | 'Spices';
+  perishable: boolean;
+  baseSpoilageRatePer100Km: number; // percentage loss per 100km
+  typicalPricePerQuintal: number;
+  packagingUnit: string;
+}
+
+export const SUPPORTED_CROPS: Crop[] = [
+  // Cereals
+  {
+    id: 'rice',
+    name: 'Rice (Paddy)',
+    hindiName: 'धान / चावल',
+    category: 'Cereals',
+    perishable: false,
+    baseSpoilageRatePer100Km: 0.1,
+    typicalPricePerQuintal: 2350,
+    packagingUnit: 'Bags (50kg)',
+  },
+  {
+    id: 'wheat',
+    name: 'Wheat',
+    hindiName: 'गेहूं',
+    category: 'Cereals',
+    perishable: false,
+    baseSpoilageRatePer100Km: 0.1,
+    typicalPricePerQuintal: 2580,
+    packagingUnit: 'Bags (50kg)',
+  },
+  {
+    id: 'maize',
+    name: 'Maize (Corn)',
+    hindiName: 'मक्का',
+    category: 'Cereals',
+    perishable: false,
+    baseSpoilageRatePer100Km: 0.2,
+    typicalPricePerQuintal: 2150,
+    packagingUnit: 'Bags (50kg)',
+  },
+
+  // Pulses
+  {
+    id: 'gram',
+    name: 'Gram (Chana)',
+    hindiName: 'चना',
+    category: 'Pulses',
+    perishable: false,
+    baseSpoilageRatePer100Km: 0.1,
+    typicalPricePerQuintal: 5850,
+    packagingUnit: 'Bags (50kg)',
+  },
+  {
+    id: 'tur',
+    name: 'Tur (Arhar)',
+    hindiName: 'तुवर / अरहर',
+    category: 'Pulses',
+    perishable: false,
+    baseSpoilageRatePer100Km: 0.1,
+    typicalPricePerQuintal: 8900,
+    packagingUnit: 'Bags (50kg)',
+  },
+  {
+    id: 'moong',
+    name: 'Moong (Green Gram)',
+    hindiName: 'मूंग',
+    category: 'Pulses',
+    perishable: false,
+    baseSpoilageRatePer100Km: 0.1,
+    typicalPricePerQuintal: 8200,
+    packagingUnit: 'Bags (50kg)',
+  },
+  {
+    id: 'urad',
+    name: 'Urad (Black Gram)',
+    hindiName: 'उड़द',
+    category: 'Pulses',
+    perishable: false,
+    baseSpoilageRatePer100Km: 0.1,
+    typicalPricePerQuintal: 7650,
+    packagingUnit: 'Bags (50kg)',
+  },
+
+  // Oilseeds
+  {
+    id: 'soybean',
+    name: 'Soybean',
+    hindiName: 'सोयाबीन',
+    category: 'Oilseeds',
+    perishable: false,
+    baseSpoilageRatePer100Km: 0.2,
+    typicalPricePerQuintal: 4650,
+    packagingUnit: 'Bags (50kg)',
+  },
+  {
+    id: 'groundnut',
+    name: 'Groundnut (Peanut)',
+    hindiName: 'मूंगफली',
+    category: 'Oilseeds',
+    perishable: false,
+    baseSpoilageRatePer100Km: 0.2,
+    typicalPricePerQuintal: 6200,
+    packagingUnit: 'Bags (40kg)',
+  },
+  {
+    id: 'mustard',
+    name: 'Mustard Seeds',
+    hindiName: 'सरसों',
+    category: 'Oilseeds',
+    perishable: false,
+    baseSpoilageRatePer100Km: 0.1,
+    typicalPricePerQuintal: 5400,
+    packagingUnit: 'Bags (50kg)',
+  },
+
+  // Vegetables
+  {
+    id: 'onion',
+    name: 'Onion',
+    hindiName: 'प्याज़ / कांदा',
+    category: 'Vegetables',
+    perishable: true,
+    baseSpoilageRatePer100Km: 0.8,
+    typicalPricePerQuintal: 1950,
+    packagingUnit: 'Mesh Bags (45kg)',
+  },
+  {
+    id: 'tomato',
+    name: 'Tomato',
+    hindiName: 'टमाटर',
+    category: 'Vegetables',
+    perishable: true,
+    baseSpoilageRatePer100Km: 1.8,
+    typicalPricePerQuintal: 2140,
+    packagingUnit: 'Plastic Crates (25kg)',
+  },
+  {
+    id: 'potato',
+    name: 'Potato',
+    hindiName: 'आलू / बटाटा',
+    category: 'Vegetables',
+    perishable: false,
+    baseSpoilageRatePer100Km: 0.4,
+    typicalPricePerQuintal: 1450,
+    packagingUnit: 'Jute Bags (50kg)',
+  },
+  {
+    id: 'cabbage',
+    name: 'Cabbage',
+    hindiName: 'पत्तागोभी',
+    category: 'Vegetables',
+    perishable: true,
+    baseSpoilageRatePer100Km: 1.4,
+    typicalPricePerQuintal: 1100,
+    packagingUnit: 'Loose / Mesh Bags',
+  },
+
+  // Fruits
+  {
+    id: 'grapes',
+    name: 'Grapes',
+    hindiName: 'अंगूर / द्राक्ष',
+    category: 'Fruits',
+    perishable: true,
+    baseSpoilageRatePer100Km: 2.2,
+    typicalPricePerQuintal: 5800,
+    packagingUnit: 'Corrugated Boxes (5kg)',
+  },
+  {
+    id: 'banana',
+    name: 'Banana',
+    hindiName: 'केला',
+    category: 'Fruits',
+    perishable: true,
+    baseSpoilageRatePer100Km: 1.6,
+    typicalPricePerQuintal: 1750,
+    packagingUnit: 'Crates / Bunches',
+  },
+  {
+    id: 'mango',
+    name: 'Mango (Alphonso / Kesar)',
+    hindiName: 'आम / हापूस',
+    category: 'Fruits',
+    perishable: true,
+    baseSpoilageRatePer100Km: 1.5,
+    typicalPricePerQuintal: 6500,
+    packagingUnit: 'Wooden / Cardboard Crates',
+  },
+  {
+    id: 'pomegranate',
+    name: 'Pomegranate (Anar)',
+    hindiName: 'अनार / डाळिंब',
+    category: 'Fruits',
+    perishable: true,
+    baseSpoilageRatePer100Km: 0.9,
+    typicalPricePerQuintal: 7200,
+    packagingUnit: 'Crates (10kg)',
+  },
+
+  // Commercial crops
+  {
+    id: 'cotton',
+    name: 'Cotton (Kapas)',
+    hindiName: 'कपास / कापूस',
+    category: 'Commercial',
+    perishable: false,
+    baseSpoilageRatePer100Km: 0.1,
+    typicalPricePerQuintal: 7100,
+    packagingUnit: 'Bales / Loose',
+  },
+  {
+    id: 'sugarcane',
+    name: 'Sugarcane',
+    hindiName: 'गन्ना / ऊस',
+    category: 'Commercial',
+    perishable: true,
+    baseSpoilageRatePer100Km: 0.6,
+    typicalPricePerQuintal: 340,
+    packagingUnit: 'Tractor load (Tons)',
+  },
+
+  // Spices
+  {
+    id: 'turmeric',
+    name: 'Turmeric (Haldi)',
+    hindiName: 'हल्दी / हळद',
+    category: 'Spices',
+    perishable: false,
+    baseSpoilageRatePer100Km: 0.1,
+    typicalPricePerQuintal: 13200,
+    packagingUnit: 'Gunny Bags (60kg)',
+  },
+  {
+    id: 'chilli',
+    name: 'Dry Red Chilli',
+    hindiName: 'लाल मिर्च / मिरची',
+    category: 'Spices',
+    perishable: false,
+    baseSpoilageRatePer100Km: 0.2,
+    typicalPricePerQuintal: 18500,
+    packagingUnit: 'Bags (40kg)',
+  },
+];

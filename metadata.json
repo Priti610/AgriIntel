@@ -1,0 +1,8 @@
+{
+  "name": "Remix Prima-AgriIntel",
+  "description": "Agricultural Market Intelligence \u0026 Smart Dispatch Optimization for Indian farmers",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
