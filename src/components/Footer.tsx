@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-xs text-gray-400">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-emerald-400" />
-              <span>Demo environment · market data clearly labeled</span>
+              <span>API-powered market data</span>
             </div>
             <span>© 2026 Prima-AgriIntel</span>
           </div>
